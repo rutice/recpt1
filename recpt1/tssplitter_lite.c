@@ -545,6 +545,11 @@ static int AnalyzePat(splitter *sp, unsigned char *buf)
 					*(pids+0x29) = 1;
 					break;
 				}
+				else if(!strcasecmp(*p, "tot")) {
+					/* TOTを出力対象にする */
+					*(pids+0x14) = 1;
+					continue;
+				}
 
 				p++;
 			} /* while */
